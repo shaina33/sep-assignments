@@ -1,0 +1,29 @@
+** Line **
+
+Since the line members are simple items, and they must be maintained in a 1-dimensional order, it makes sense to store them in an Array.
+Items can be accessed and updated using indexes and built-in Array methods. Developers can use #join and #leave to add/remove members, #search and #index to look for members, and #front/back/middle to look at specific positions.
+It's important to use #join to add members, so that members are always added to the back of the line.
+For methods that return members at specific positions, I chose to use indexes, rather than built-in methods like #pop, so that the line is not altered, just accessed.
+This structure could be used to represent any situation where items are in a 1-dimensional order, and can only be added to the end.
+This could apply to a 'line' or priority list for many different situations, such as buying concert tickets.
+With an additional method for removing the first member, it could be used as the queue in a BFS algorithm.
+
+
+** Pixel **
+
+Each Pixel is a simple object with variables for its attributes (3 colors, 2 dimensions).
+This makes it very easy to set and access its attributes, and to insert the whole Pixel object into a Screen later.
+The attributes are validated during initialization, so that invalid data cannot be initialized.
+
+note: When I tried to run pixel_spec.rb, I received a NameError from line 3 of the spec file. I tested my Pixel code separetely, and all seems well.
+
+** Screen **
+
+I chose to represent a screen as a matrix.
+This clearly maintains the 2-dimensionality of a real-life screen.
+(x,y) coordinates can be easily accessed or updated using an [i][j] index system. These processes are simplified using the #at and #insert methods.
+Since a real-life screen would require pixel information at every position, creating a full matrix does not waste space.
+Coordinates are validated during Pixel insertion, so an invalid Pixel cannot be added to the Screen.
+
+This Pixel & Screen structure could be generalized to represent any similar data that included a 2-dimensional coordinate plane, and items at specific coordinates.
+For example, they could represent points of interest on a map.
