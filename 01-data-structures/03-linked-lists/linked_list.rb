@@ -57,6 +57,22 @@ class LinkedList
       end
     end
   end
+  
+  # added for benchmarking purposes
+  def findIndex(index)
+    count = 0
+    temp = self.head
+    while temp && (count < index)
+      temp = temp.next
+      count += 1
+    end
+    return temp
+  end
+  # added for benchmarking purposes
+  def deleteIndex(index)
+    node = findIndex(index)
+    delete(node)
+  end
 
   # This method adds `node` to the front of the list and must set the list's head to `node`.
   def add_to_front(node)

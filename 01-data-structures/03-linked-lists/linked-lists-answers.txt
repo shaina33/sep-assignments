@@ -1,0 +1,31 @@
+Spatial Locality refers to data items being stored spatially near each other in computer memory.
+For example, items in an array are stored sequentially in memory.
+This is useful because the computer can read a nearby group of items from RAM all at once, and save them into the cache.
+Cached items can be accessed more quickly, so it's helpful when we want to access several items that are stored near each other.
+This makes looping through an array quite fast.
+
+See benchmarks.rb (array is always first in the comparisons)
+
+Comparison of creating 10,000-item Array or Linked List:
+
+user     system      total        real
+   0.060000   0.060000   0.120000 (  0.118660)
+   0.000000   0.000000   0.000000 (  0.001316)
+
+-> creating the Linked List is faster, by factor of 90
+
+Comparison of accessing 5,000th item in an Array or Linked List:
+
+user     system      total        real
+   0.000000   0.000000   0.000000 (  0.000003)
+   0.000000   0.000000   0.000000 (  0.000225)
+
+-> accessing the Array is faster, by factor of 75
+
+Comparison of deleting the 5,000th item in an Array or Linked List:
+
+user     system      total        real
+   0.000000   0.000000   0.000000 (  0.000006)
+   0.000000   0.000000   0.000000 (  0.000501)
+   
+-> deleting from the Array is faster, by factor of 83
