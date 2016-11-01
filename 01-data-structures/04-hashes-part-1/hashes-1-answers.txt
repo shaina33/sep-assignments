@@ -1,0 +1,6 @@
+Why is doubling the size of the array not a great idea?
+-> the size of the hash will quickly become very large, and have a lot of wasted space
+-> since the sizes aren't prime numbers, collisions will happen more frequently
+-> frequent collisions and major resizing means a lot of work for the computer to do
+
+
