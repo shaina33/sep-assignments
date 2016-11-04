@@ -87,4 +87,31 @@ class SeparateChaining
 
     @items = new_items
   end
+  
+  def print
+    (0..@items.size-1).each do |i|
+      if @items[i]
+        puts 'BUCKET #' + i.to_s
+        current = @items[i].head
+        while current
+          puts current.key + ' -> ' + current.value
+          current = current.next
+        end
+      end
+    end
+  end
+  
 end
+
+def test_function
+  star_wars_movies = SeparateChaining.new(6)
+  star_wars_movies["Star Wars: The Phantom Menace"] = "Number One"
+  star_wars_movies["Star Wars: Attack of the Clones"] = "Number Two"
+  star_wars_movies["Star Wars: Revenge of the Sith"] = "Number Three"
+  star_wars_movies["Star Wars: A New Hope"] = "Number Four"
+  star_wars_movies["Star Wars: The Empire Strikes Back"] = "Number Five"
+  star_wars_movies["Star Wars: Return of the Jedi"] = "Number Six"
+  star_wars_movies.print()
+end
+
+#test_function()

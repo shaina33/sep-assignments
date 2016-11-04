@@ -86,6 +86,6 @@ class HashClass
 
 end
 
-h = HashClass.new(1)
-h['key'] = 'one'
-h['key1'] = 'two'
+# h = HashClass.new(1)
+# h['key'] = 'one'
+# h['key1'] = 'two'

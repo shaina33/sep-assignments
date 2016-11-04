@@ -37,14 +37,15 @@ RSpec.describe OpenAddressing, type: Class do
       hash["key"] = "second value"
       expect(hash.size).to eq 4
     end
-
-    it "resizes the array when a collision occurs and hash is full" do
-      hash = OpenAddressing.new(1)
-      hash["key"] = "value"
-      expect(hash.size).to eq 1
-      hash["key"] = "second value"
-      expect(hash.size).to eq 2
-    end
+    
+# in last assignment, we decided that an insertion of a new value with the same key should be ignored, not treated as a collision
+    # it "resizes the array when a collision occurs and hash is full" do
+    #   hash = OpenAddressing.new(1)
+    #   hash["key"] = "value"
+    #   expect(hash.size).to eq 1
+    #   hash["key"] = "second value"
+    #   expect(hash.size).to eq 2
+    # end
 
     it "sets the value of key to value" do
       expect(star_wars_movies["Star Wars: The Phantom Menace"]).to eq "Number One"
@@ -60,7 +61,7 @@ RSpec.describe OpenAddressing, type: Class do
     it "returns -1 if there are no open indices" do
       inception = OpenAddressing.new(1)
       inception["The Original"] = "The Best Movie Ever"
-      expect(inception.next_open_index(0)).to eq -1
+      expect(inception.next_open_index(0)).to eq (-1)
     end
 
   end
