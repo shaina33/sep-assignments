@@ -31,7 +31,7 @@ class BinarySearchTree
   end
 
   # Recursive Depth First Search
-  def find(root, data)
+  def find(root, data) # data is a title, not a node
     if root.title == data
       # base case, data matches
       return root
@@ -53,7 +53,7 @@ class BinarySearchTree
     end
   end
 
-  def delete(root, data)
+  def delete(root, data) # data is a title, not a node
     parent = findParent(root, data)
     if parent == true
       # matching node is the tree root

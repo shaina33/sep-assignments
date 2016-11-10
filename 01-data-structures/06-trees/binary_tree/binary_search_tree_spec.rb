@@ -3,8 +3,8 @@ include RSpec
 require_relative 'binary_search_tree'
 
 RSpec.describe BinarySearchTree, type: Class do
+  # from Bloc
   let (:root) { Node.new("The Matrix", 87) }
-
   let (:tree) { BinarySearchTree.new(root) }
   let (:pacific_rim) { Node.new("Pacific Rim", 72) }
   let (:braveheart) { Node.new("Braveheart", 78) }
@@ -17,6 +17,21 @@ RSpec.describe BinarySearchTree, type: Class do
   let (:hope) { Node.new("Star Wars: A New Hope", 93) }
   let (:empire) { Node.new("Star Wars: The Empire Strikes Back", 94) }
   let (:mad_max_2) { Node.new("Mad Max 2: The Road Warrior", 98) }
+  
+  # from me
+  let (:imitation) { Node.new('The Imitation Game', 90) }
+  let (:my_tree) { BinarySearchTree.new(imitation) }
+  let (:nice_guys) { Node.new("The Nice Guys", 92) }
+  let (:planet_apes) { Node.new("Planet of the Apes", 91) }
+  let (:walking_dead) { Node.new("The Walking Dead", 84) }
+  let (:star_trek) { Node.new("Star Trek", 95) }
+  let (:mulan) { Node.new("Mulan", 86) }
+  let (:pocahontas) { Node.new("Pocahontas", 56) }
+  let (:pirates) { Node.new("Pirates of the Caribbean", 79) }
+  let (:westworld) { Node.new("Westworld", 89) }
+  let (:brooklyn99) { Node.new("Brooklyn 99", 94) }
+  let (:gilmore) { Node.new("Gilmore Girls", 87) }
+  let (:step_up) { Node.new("Step Up", 19) }
 
   describe "#insert(data)" do
     it "properly inserts a new node as a left child" do
@@ -172,5 +187,20 @@ RSpec.describe BinarySearchTree, type: Class do
       tree.insert(root, hope)
       expect { tree.printf }.to output(expected_output).to_stdout
     }
+    
+    it 'prints my movies' do
+      my_tree.insert(imitation, nice_guys)
+      my_tree.insert(imitation, planet_apes)
+      my_tree.insert(imitation, walking_dead)
+      my_tree.insert(imitation, star_trek)
+      my_tree.insert(imitation, mulan)
+      my_tree.insert(imitation, pocahontas)
+      my_tree.insert(imitation, pirates)
+      my_tree.insert(imitation, westworld)
+      my_tree.insert(imitation, brooklyn99)
+      my_tree.insert(imitation, gilmore)
+      my_tree.insert(imitation, step_up)
+      my_tree.printf
+    end
   end
 end

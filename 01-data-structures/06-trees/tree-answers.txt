@@ -1,0 +1,52 @@
+Printed Binary Search Tree (breadth-first):
+The Imitation Game: 90
+The Walking Dead: 84
+The Nice Guys: 92
+Pocahontas: 56
+Mulan: 86
+Planet of the Apes: 91
+Star Trek: 95
+Step Up: 19
+Pirates of the Caribbean: 79
+Westworld: 89
+Brooklyn 99: 94
+Gilmore Girls: 87
+
+Printed Min Heap (with indexes on left, breadth-first):
+1 Step Up: 19
+2 Pirates of the Caribbean: 79
+3 Pocahontas: 56
+4 Westworld: 89
+5 Gilmore Girls: 87
+6 The Walking Dead: 84
+7 Mulan: 86
+8 The Nice Guys: 92
+9 The Imitation Game: 90
+10 Star Trek: 95
+11 Brooklyn 99: 94
+12 Planet of the Apes: 91
+
+Benchmark Output:
+     user     system      total        real
+   2.480000   0.000000   2.480000 (  2.475632)
+   0.000000   0.000000   0.000000 (  0.006551)
+   0.000000   0.000000   0.000000 (  0.000006)
+   0.000000   0.000000   0.000000 (  0.000572)
+   0.010000   0.000000   0.010000 (  0.002486)
+   0.000000   0.000000   0.000000 (  0.001741)
+
+Insertion of nodes through 10,000:
+Tree took much longer than heap.
+
+Finding node 5000:
+Both went quickly, but heap took much longer.
+
+Deletion time:
+Tree took longer.
+
+Pros & Cons:
+- BST keeps the data sorted, so it's faster at finding items in the set.
+- Heap is unsorted, so it's slower at finding items.
+- Heap can find the min (or max) in constant time.
+- At least for my implementations, heaps are faster at insertion & deletion.
+- So, a BST would be better for sorting & finding items, and a heal would be better for a priority queue.
