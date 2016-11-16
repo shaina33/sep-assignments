@@ -1,0 +1,47 @@
+To calculate a restaurant tip:
+
+READ pre-tax bill subtotal
+IF poor service
+    CALCULATE the tip amount as 15% of the pre-tax bill subtotal
+ELSE
+    CALCULATE the tip amount as 20% of the pre-tax bill subtotal
+ENDIF
+WRITE the tip amount onto the receipt's tip line
+CALCULATE the total amount as the sum of the subtotal, tax, and tip
+WRITE the total on the receipt's total line
+WRITE your signature on the receipt's signature line
+
+To walk to the library:
+
+EXIT house
+TURN around
+LOCK house
+TURN around
+WALK FORWARD to the sidewalk
+TURN left
+WALK FORWARD to the end of the block
+TURN left
+WALK FORWARD to the end of the block
+WAIT UNTIL road is clear
+WALK FORWARD to sidewalk
+WAIT UNTIL road is clear
+WALK FORWARD to sidewalk
+WALK FORWARD on sidewalk UNTIL reach Professors Row
+TURN left
+WALK FORWARD UNTIL reach campus center
+TURN right
+WAIT UNTIL road is clear
+WALK FORWARD to sidewalk
+WALK FORWARD on sidwalk UNTIL reach library
+ENTER library
+
+To open Bloc road map on my computer:
+
+OPEN new window of Google Chrome
+CLICK on search bar
+FOR EACH character in "bloc.io"
+    TYPE character
+    IF auto-fill suggestion of "bloc.io" appears OR character is last character
+        PRESS Enter button
+    ENDIF
+END FOR
