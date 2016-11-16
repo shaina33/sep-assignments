@@ -19,3 +19,15 @@ puts fib(6)
 puts fib(7)
 puts fib(8)
 puts fib(9)
+
+# Output:
+# 1
+# 1
+# 2
+# 3
+# 5
+# 8
+# 13
+# 21
+# 34
+# 55
