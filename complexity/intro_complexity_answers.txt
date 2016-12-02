@@ -1,0 +1,28 @@
+1. O(2^n) is snail mail, while O(1) is email.
+
+2. The best case scenario for binary search is when the desired element is in the middle of the collection, where it is looked at first.
+
+3. The worst case scenario for binary search is when the element is in a position that requires the maximum number of halving iterations to find, such as in the first or last index positions.
+
+4. The bounded case for binary search would be somewhere between the best and worst case scenarios, so the desired element would not be in the middle or end positions, but somewhere in between.
+
+5. See Excel file (complexity 2-4).
+
+6 & 7. This data is just plotting the f(2^n), so it's asymptotic analysis and Big O are both 2^n.
+
+8. See worst_case_linear.rb. output of (size n, iterations) up to n = 5 is
+    ( 1 , 1 )
+    ( 2 , 2 )
+    ( 3 , 3 )
+    ( 4 , 4 )
+    ( 5 , 5 )
+
+9. See Excel file (complexity 2-4).
+
+10. In the worst case, binary search would take log n time. So it's upper bound, or Big O would be O(log n).
+
+11. In the best case, binary search would take constant time. So it's lower bound, or Big Omega, would be Omega(1).
+
+12. Big Theta describes both an upper and lower bound on the algorithm's performance.
+    Since the upper and lower bounds of Binary Search are not described using the same category of function,
+    I think there is no Big Theta solution?
