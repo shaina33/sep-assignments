@@ -1,0 +1,16 @@
+1. goodbye_world is O(1) because it takes a constant amount of time to execute, regardless of the size of n.
+
+2. find_largest is O(n) because it simply loops through the elements of the collection, so it's execution time is proportional to n.
+
+3. find_largest_2D is also O(n). It also simply loops through each element in the collection, by looking through each item in each array.
+
+4.  I'm a bit fuzzy on this answer and would like to discuss it more.  
+    For n <= 1, no recursive calls are required, and the algorithm executes in constant time.
+    For greater n, two recursive calls are performed each time, causing the recursive tree to grow exponentially.
+    The levels in the tree and total number of calls are relative to n, so the algorithm has O(2^n).
+
+5. This iterative version of Fibonacci has O(n). The while loop repeats n-2 times.
+
+6.  In the worst case, this quick sort algorithm would need to look through all of the elements, in order to place each element.
+    This means it has it is O(n^2).
+    
