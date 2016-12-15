@@ -1,0 +1,16 @@
+initial version:
+In the first section of code, it loops through all of the values to obtain the combined_array.
+In the sorting section, it loops through the sorted_array values for each unsorted value.
+Overall, this would have O(n^2).
+
+code optimization version:
+This version is faster in the first section, since it only loops through each array, rather than each value, but it's still relative to n.
+The sorting section hasn't changed, so this algorithm is still O(n^2).
+
+time complexity version:
+This version uses an optimized quick sort for the sorting section, which is generally runs within n log n time.
+So this algorithm is O(n log n).
+
+space complexity version:
+This version uses selection sort, so the performace time is O(n^2).
+However, it runs in place, rather than building a new sorted array, so it is better than the initial version.
